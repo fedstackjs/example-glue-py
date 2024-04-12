@@ -1,0 +1,4 @@
+# This file store which server problem should be deployed
+type: problem
+server: hpcgame
+problemId: c2766841-de3b-4df4-86ea-d018f4f202db

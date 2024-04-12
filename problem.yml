@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://aoi-demo.fedstack.org/schemas/problem-config.json
+label: glue
+judge:
+  adapter: glue
+  config:
+    # Update the following to what you want to run
+    run: |
+      unzip -d problem $GLUE_PROBLEM_DATA
+      unzip -d solution $GLUE_SOLUTION_DATA
+      find . -type l -delete
+      python3 ./problem/judge.py
+    # Overall judge timeout, after which the judge process will
+    # be killed and judge will report error
+    timeout: 600 # 10 minutes
+# Update to reflect the submit form
+# See JSON Schema or AOI Server source code for details
+submit:
+  form:
+    files:
+      - path: main.py
+        label: main.py
+        description: The only source file to submit
+        type:
+          editor:
+            language: python
+solution:
+  maxSize: 4096 # 4KB

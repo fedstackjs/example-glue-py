@@ -1,0 +1,8 @@
+{
+  "name": "example-glue",
+  "private": true,
+  "packageManager": "yarn@4.1.1",
+  "dependencies": {
+    "@aoi-js/cli": "^0.0.5"
+  }
+}
